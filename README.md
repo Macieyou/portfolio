@@ -1,2 +1,0 @@
-# portfolio
-HTML/CSS/JS
