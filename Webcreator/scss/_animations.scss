@@ -1,0 +1,22 @@
+@keyframes bounce {
+    0% {
+        -webkit-transform: translateY(0px) translateX(0px);
+        transform: translateY(0px) translateX(0px);
+    }
+    50% {
+        -webkit-transform: translateY(20px) translateX(0px);
+        transform: translateY(20px) translateX(0px);
+    }
+    100% {
+        -webkit-transform: translateY(0px) translateX(0px);
+        transform: translateY(0px) translateX(0px);
+    }
+}
+@keyframes appear1{
+    from{
+        z-index: 1;
+    }
+    to {
+        z-index: 3;
+    }
+}
