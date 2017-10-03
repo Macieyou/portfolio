@@ -1,0 +1,246 @@
+html {
+    font-size: 10px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    list-style: none;
+    background-image: url(../img/bg.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    font-family: 'Oswald', sans-serif;
+    z-index: -1;
+}
+
+.navigation{
+    margin: 0;
+    padding: 20px;
+    width: 30%;
+    height: 100vh;
+    list-style-type: none;
+    background-color:rgba(0, 0, 0, 0.4);
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    opacity: 0;
+    animation: blink .5s ease-in 1s forwards;
+
+    .screen{
+        width: 100%;
+        height: 55%;
+        border: 2px solid #15519a;
+        box-shadow: 0 0 15px rgba(51, 75, 156, 0.7), 0 0 15px rgba(51, 75, 156, 0.7) inset;
+        box-sizing: border-box;
+        padding: 0 15px;
+        font-size: 1.2rem;
+        margin: 0 3px;
+        margin-bottom: -30px;
+
+        ul{
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+    }
+    .item{
+        border: 2px solid #15519a;
+        box-shadow: 0 0 15px rgba(51, 75, 156, 0.7), 0 0 15px rgba(51, 75, 156, 0.7) inset;
+        box-sizing: border-box;
+        margin: 3px;
+        font-size: 1.6rem;
+        flex: 1;
+        flex-basis: 30%;
+
+        &:hover {
+            box-shadow: inset 0 0 70px rgba(51, 75, 156, 0.9);
+            outline-color: rgba(255, 255, 255, 0);
+            outline-offset: 15px;
+        }
+
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            color: #fff;
+            height: 100%;
+            text-transform: uppercase;
+            text-shadow: 0px 0px 15px #71f9ff;
+
+            &:hover, &:focus {
+                box-shadow: inset 0 0 70px rgba(51, 75, 156, 0.9);
+                outline-color: rgba(255, 255, 255, 0);
+                outline-offset: 15px;
+            }
+        }
+
+        .container{
+            width: 70%;
+            height: 100vh;
+            position: absolute;
+            top: 0;
+            right: 0;
+
+            #planet {
+                &:after{
+                    position: absolute;
+                    content: '';
+                    top: -1px;
+                    left: -1px;
+                    right: -1px;
+                    bottom: -1px;
+                    height: 100%;
+                    border-radius: 50%;
+                    background-image:
+                        -webkit-radial-gradient(16% 30%, 30% 30%, rgba(255,240,230,.4), transparent),
+                        -webkit-gradient(linear, left top, right top, color-stop(12%, rgba(255,240,220,0.3)), color-stop(40%, rgba(255,240,220,0)));
+                }
+                &:before{
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    height: 100%;
+                    width: 100%;
+                    border-radius: 50%;
+                    background: transparent url('http://rojo2.com/img/texture-01-clouds.png') repeat-x;
+                    background-size: 780px;
+                    animation: rotate-one 18s linear infinite;
+                    box-shadow: -80px 0px 60px 2px #000 inset;
+                }
+            }
+
+            .sun, .mercury, .venus, .earth, .mars, .jupiter, .saturn, .uranus, .neptune {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                width: 300px;
+                height: 300px;
+                border-radius: 50%;
+                background: url(../img/earth.jpg) repeat-x;
+                background-size: 780px;
+                animation: rotate-one 30s linear infinite;
+                transition: transform 200ms linear;
+                transform-style: preserve-3d;
+
+            }
+            .sun{
+                background-image: url(../img/sun.jpg);
+                filter: brightness(120%);
+                width: 500px;
+                height: 500px; 
+                animation: rotate-four 30s linear infinite, glow 2s ease infinite;
+                background-size: 1170px;
+                &:after{
+                    background-image: none !important;
+                }
+                &:before{
+                    background: none !important;
+                    box-shadow: 0 0 80px 25px #d14601 inset !important;
+                }
+            }
+            .mercury {
+                background-image: url(../img/mercury.jpg);
+                width: 200px;
+                height: 200px; 
+                background-size: 400px;
+                animation: rotate-three 15s linear infinite;
+                box-shadow: -60px 0px 50px 2px #000 inset, 0 0 20px 2px #000;
+                &:before{
+                    display: none;
+                }
+            }
+            .venus {
+                background-image: url(../img/venus.jpg);
+                background-size: 600px;
+                animation: rotate-two 30s linear infinite;
+                box-shadow: -80px 0px 70px 2px #000 inset, -10px 0 25px rgba(247, 208, 146, 0.4);
+                &:before{
+                    display: none;
+                }
+            }
+            .earth {
+                box-shadow: -10px 0 35px rgba(52, 78, 134 ,0.7);
+            }
+            .mars {
+                background-image: url(../img/mars.jpg);
+                background-size: 600px;
+                animation: rotate-two 30s linear infinite;
+                box-shadow: -90px 0px 70px 2px #000 inset, -10px 0 25px rgba(205, 91, 54, 0.4);
+                &:before{
+                    display: none;
+                }
+            }
+            .jupiter {
+                background-image: url(../img/jupiter.jpg);
+                width: 500px;
+                height: 500px;
+                box-shadow: -140px 0px 90px 2px #000 inset, 0 0 20px 2px #000, inset 10px 0 30px rgba(000,000,000,1);
+                background-size: 1170px;
+                animation: rotate-four 30s linear infinite;
+                border: 1px solid #000;
+                &:before{
+                    display: none;
+                }
+            }
+
+            .saturn {
+                background-image: url(../img/saturn.jpg);
+                width: 350px;
+                height: 350px;
+                box-shadow: inset 10px 0 30px rgba(255,240,220,0.4);
+                &:before{
+                    display: none;
+                }
+
+                .rings {
+                    position: relative;
+                    top: -30%;
+                    right: 64%;
+                    width: 800px;
+                    height: 600px;
+                    background: radial-gradient(ellipse at center,  rgba(24,19,25,0) 0%,rgba(53,52,51,0) 34%,rgba(55,54,52,1) 36%,rgba(56,55,53,1) 37%,rgba(68,67,66,1) 38%,rgba(56,55,53,1) 39%,rgba(68,67,66,1) 40%,rgba(56,55,53,1) 41%,rgba(87,77,76,1) 42%,rgba(87,77,76,1) 44%,rgba(113,110,103,1) 46%,rgba(113,110,103,1) 48%,rgba(113,98,93,1) 49%,rgba(113,98,93,1) 51%,rgba(122,115,105,1) 52%,rgba(113,98,93,1) 53%,rgba(113,98,93,1) 54%,rgba(122,115,105,1) 55%,rgba(106,99,89,1) 56%,rgba(106,99,89,1) 58%,rgba(79,76,76,0) 60%,rgba(65,64,70,1) 61%,rgba(65,64,70,1) 62%,rgba(90,85,89,1) 63%,rgba(78,74,73,1) 65%,rgba(78,73,74,1) 67%,rgba(78,73,74,0) 68%,rgba(78,73,75,1) 69%,rgba(78,73,75,1) 70%,rgba(78,73,76,0) 71%,rgba(77,72,76,0) 72%,rgba(24,19,25,0) 100%);
+                    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00181319', endColorstr='#00181319',GradientType=1 );
+                    transform: rotateX(75deg);
+                    animation: appear 2s ease-in;
+                }
+            }
+            .uranus {
+                background-image: url(../img/uranus.jpg);
+                width: 350px;
+                height: 350px;
+                box-shadow: -10px 0 25px rgba(171, 219, 226, 0.4);
+            }
+            .neptune {
+                background-image: url(../img/neptune.jpg);
+                width: 350px;
+                height: 350px;
+                box-shadow: -80px 0px 60px 2px #000 inset, -10px 0 25px rgba(51, 75, 156, 0.5);
+                &:before{
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .info {
+        box-sizing: border-box;
+        color: #FFF;
+        -webkit-animation: appear 2s ease-in;
+        animation: appear 2s ease-in;
+        z-index: 5;
+        font-size: 1.8rem;
+
+        p{
+            line-height: 100%;
+        }
+    }
+}

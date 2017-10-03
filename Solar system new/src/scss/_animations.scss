@@ -1,0 +1,39 @@
+@keyframes glow {
+    from { box-shadow: #d14601 0 0 70px; }
+    50%	 { box-shadow: #d14601 0 0 150px; }
+    to   { box-shadow: #d14601 0 0 70px; }
+}
+
+@keyframes appear {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes blink {
+    0% {opacity: 0;}
+    20% {opacity: 1;}
+    40% {opacity: 0;}
+    60% {opacity: 1;}
+    80% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes rotate-one {
+    0% {background-position: 0 0;}
+    0% {background-position: -780px 0;}
+}
+
+@keyframes rotate-two {
+    0% {background-position: 0 0;}
+    0% {background-position: -600px 0;}
+}
+
+@keyframes rotate-three {
+    0% {background-position: 0 0;}
+    0% {background-position: -400px 0;}
+}
+
+@keyframes rotate-four {
+    0% {background-position: 0 0;}
+    0% {background-position: -1170px 0;}
+}
