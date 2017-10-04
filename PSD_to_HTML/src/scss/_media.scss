@@ -1,0 +1,189 @@
+// media for Core Services
+@media all and (max-width:900px) {
+    .features{
+        width: 100% !important;
+    }
+}
+
+// media for about us carousel
+@media all and (max-width:600px) {
+    .about-us{
+        height: 730px !important;
+        .timeline{
+            display: none !important;
+        }
+        .bx-wrapper{
+            display: block !important;
+
+            .bx-pager, .bx-default-pager{
+                position: absolute;
+                bottom: -14px;
+                width: 100%;
+            }
+
+        }
+    }
+}
+
+// media for team carousel
+@media all and (max-width:900px) {
+    .team{
+        .team-container{
+            display: none !important;
+        }  
+        .bx-wrapper{
+            display: block !important;
+            background: #F7F7F7 !important;
+        }  
+        .text{
+            display: none !important;
+        }
+    }
+}
+
+// media for Other Expertise
+@media all and (max-width:1280px){
+    .expertise{
+        width: 100%;
+        text-align: center;
+
+        .bg-right{
+            display: none;
+        }
+        .feature-container{
+            width: 100%;
+            display: flex;
+            .feaure-box{
+                display: flex;
+                padding-bottom: 50px;
+
+                i{
+                    float: none !important;
+                }
+            }
+        }
+    }
+}
+
+// media for Portfolio
+@media all and (max-width: 1300px){
+    .portfolio{
+        text-align: center;
+        .wrapper{
+            background-position: center;
+            background-size: cover;
+        }
+        .bg-right{
+            display: none;
+        }
+    }
+}
+
+// media for Gallery
+@media all and (max-width: 1100px){
+    .gallery{
+        .thumb{
+            float: left;
+            width: 50% !important;
+
+            @media all and (max-width: 680px){
+                width: 100% !important;
+            }
+        }
+    }
+}
+
+//media for About us
+@media all and (max-width: 1180px){
+    .about-us{
+        .timeline{
+            left: 0% !important;
+
+            &:before{
+                left: 20% !important;
+            }
+            .flag-image{
+                left: 20% !important;
+            }
+            li{
+                &:nth-child(odd){
+                    text-align: left !important;
+
+                    .flag-wrapper{
+                        flex-direction: row-reverse !important;
+                    }
+                }
+
+                &:nth-child(even){
+                    .flag-wrapper{
+                        flex-direction: row-reverse;
+                    }
+                    .flag-text{
+                        padding: 0 !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//media for Contact
+@media all and (max-width: 1070px){
+    .contact{
+        .nav-container{
+            display: block !important;
+
+            .col-1{
+                width: 100% !important;
+                text-align: center;
+                .icon-box{
+                    justify-content: center !important;
+                    padding: 10px 0 !important;
+                    width: 33% !important;
+
+                    @media all and (max-width: 885px){
+                        width: 32% !important;
+                    }
+                    @media all and (max-width: 720px){
+                        display: inherit !important;
+                        width: 49% !important;
+                        text-align: center;
+                        font-size: 12px;
+                    }
+                }
+            }
+            .col-2{
+                width: 100% !important;
+
+                .form-container{
+                    padding-top: 35px !important;
+
+                    input[type=submit]{
+                        width: 32%;
+
+                        @media all and (max-width: 720px){
+                            width: 100% !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//media for welcome text
+@media all and (max-height: 736px){
+    .welcome-text{
+        top: 23% !important;
+        
+        @media all and (max-height: 667px){
+            h1{
+                font-size: 2.5em !important;
+            }
+            h2{
+                font-size: 1em !important;
+                padding: 0 20px;
+            }
+        }
+    }
+}
