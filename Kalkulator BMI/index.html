@@ -3,40 +3,42 @@
     <head>
         <meta charset="UTF-8">
         <title>Oblicz swoje BMI</title>
-        <!-- Latest compiled and minified CSS -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
         <link rel="stylesheet" href="style.css">
 
     </head>
     <body>
-        <div id="container"> 
-            <div class="alert">
-                Tu będzie powiadomienie
+        <div class="wrapper">
+            <div class="container"> 
+                <div class="alert">
+                    Tu będzie powiadomienie
+                </div>
+                <form name="bmiForm">
+            
+                    Wzrost w cm
+                    <input type="number" name="height">
+            
+                    Waga w kg
+                    <input type="number" name="weight">
+            
+            <!--
+                    Płeć
+                    <select>
+                        <option value="female">Kobieta</option>
+                        <option value="male">Mężczyzna</option>
+                    </select>
+            -->
+                    
+                    <a href="#" class="result" onClick="calculateBmi()">
+                        Oblicz BMI
+                    </a>
+                    
+                    <input class="reset" type="reset" value="Reset">
+            
+                </form>
             </div>
-            <form name="bmiForm">
-
-                Wzrost w cm
-                <input type="number" name="height">
-
-                Waga w kg
-                <input type="number" name="weight">
-
-<!--
-                Płeć
-                <select>
-                    <option value="female">Kobieta</option>
-                    <option value="male">Mężczyzna</option>
-                </select>
--->
-                
-                <a href="#" class="result" onClick="calculateBmi()">
-                    Oblicz BMI
-                </a>
-                
-                <input class="reset" type="reset" value="Reset">
-
-            </form>
         </div>
 
         <script src="code.js" type="text/javascript"></script>

@@ -12,17 +12,29 @@ a:hover{
     color: #fff;
 }
 
-#container{
+.wrapper{
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.container{
     background-color: white;
-    position: relative;
+    position: fixed;
     width: 400px;
     padding: 50px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 100px;
     font-size: 20px;
     -webkit-box-shadow: 3px 3px 30px 5px rgba(204,204,204,0.9);
-    -moz-box-shadow: 3px 3px 30px 5px rgba(204,204,204,0.9);
     box-shadow: 3px 3px 30px 5px rgba(204,204,204,0.9);
 }
 
@@ -35,6 +47,7 @@ input[type=number], input[type=text], .reset,  select{
     font-size: 15px;
     padding: 10px;
     margin-bottom: 25px;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     outline: none;
 }
@@ -42,7 +55,6 @@ input[type=number], input[type=text], .reset,  select{
 select:focus,
 input[type=number]:focus, input[type=text]:focus{
     -webkit-box-shadow: 0px 0px 10px 2px rgba(204,204,204,0.9);
-    -moz-box-shadow: 0px 0px 10px 2px rgba(204,204,204,0.9);
     box-shadow: 0px 0px 10px 2x rgba(204,204,204,0.9);
 }
 
@@ -76,4 +88,52 @@ input[type=number]:focus, input[type=text]:focus{
 
 .alert-success, .alert-danger, .alert-warning {
     display: block;
+}
+
+/*==========  Non-Mobile First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media all and (max-width : 1200px) {
+    .container{
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+    }       
+}
+
+/* Medium Devices, Desktops */
+@media all and (max-width : 992px) {
+    .container{
+        -webkit-transform: scale(1.5);
+        transform: scale(1.5);
+    }   
+}
+
+/* Small Devices, Tablets */
+@media (orientation: portrait) (max-width : 768px) {
+    .container{
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+    }   
+}
+
+/* Extra Small Devices, Phones */ 
+@media (orientation: portrait) and (max-width : 480px) {
+    .container{
+        -webkit-transform: scale(0.8);
+        transform: scale(0.8);
+    }   
+}
+
+/* Custom, iPhone Retina */ 
+@media (orientation: portrait) and (max-width : 320px) {
+    .container{
+        -webkit-transform: scale(0.7);
+        transform: scale(0.7);
+    }   
+}
+@media (orientation: landscape) and (max-width : 768px) {
+    .container{
+        -webkit-transform: scale(0.7);
+        transform: scale(0.7);
+    }   
 }
