@@ -1,334 +1,363 @@
-body {
-    background-image: url(../images/bg.jpg);
-    background-size: cover;
-    background-position: 50% 50%;
-    overflow: hidden;
-    margin: 0 !important;
-    padding: 0 !important;}
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
 
-.solarSystem {
-    position: relative;
-    height: 100vh;
-    width: 100%;
+body {
+  background-image: url(../images/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%; }
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .container .solarSystem {
+    position: fixed;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
     -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center; }
-.solarSystem .sun {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    -webkit-box-shadow: #ff4400 0 0 10px;
-    box-shadow: #ff4400 0 0 10px;
-    background-image: url(../images/sun.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    -webkit-animation-name: glow;
-    animation-name: glow;
-    -webkit-animation-iteration-count: infinite;
-    animation-iteration-count: infinite;
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    position: absolute; }
-.solarSystem .mercury {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    border: 1px solid #c5c5c5;
-    position: absolute;
-    -webkit-animation-name: spin;
-    animation-name: spin;
-    -webkit-animation-iteration-count: infinite;
-    animation-iteration-count: infinite;
-    -webkit-animation-duration: 10s;
-    animation-duration: 10s;
-    -webkit-animation-timing-function: linear;
-    animation-timing-function: linear; }
-.solarSystem .mercury:before {
-    content: '';
-    height: 8px;
-    width: 8px;
-    background: #D9AB70;
-    position: absolute;
-    top: 32%;
-    border-radius: 50%; }
-.solarSystem .venus {
-    width: 240px;
-    height: 240px;
-    border-radius: 50%;
-    border: 1px solid #c5c5c5;
-    position: absolute;
-    -webkit-animation-name: spin;
-    animation-name: spin;
-    -webkit-animation-iteration-count: infinite;
-    animation-iteration-count: infinite;
-    -webkit-animation-duration: 20s;
-    animation-duration: 20s;
-    -webkit-animation-timing-function: linear;
-    animation-timing-function: linear; }
-.solarSystem .venus:before {
-    content: '';
-    height: 26px;
-    width: 26px;
-    background-image: url(../images/venus.png);
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    position: absolute;
-    top: 22%;
-    border-radius: 50%;
-    -webkit-animation-name: spin;
-    animation-name: spin;
-    -webkit-animation-iteration-count: infinite;
-    animation-iteration-count: infinite;
-    -webkit-animation-duration: 10s;
-    animation-duration: 10s;
-    -webkit-animation-timing-function: linear;
-    animation-timing-function: linear; }
-.solarSystem .earth {
-    width: 340px;
-    height: 340px;
-    border-radius: 50%;
-    border: 1px solid #c5c5c5;
-    position: absolute;
-    -webkit-animation-name: spin;
-    animation-name: spin;
-    -webkit-animation-iteration-count: infinite;
-    animation-iteration-count: infinite;
-    -webkit-animation-duration: 25s;
-    animation-duration: 25s;
-    -webkit-animation-timing-function: linear;
-    animation-timing-function: linear; }
-.solarSystem .earth:before {
-    content: '';
-    height: 30px;
-    width: 30px;
-    background-image: url(../images/earth.png);
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    overflow: hidden;
-    position: absolute;
-    top: 25%;
-    border-radius: 50%;
-    -webkit-animation-name: spin;
-    animation-name: spin;
-    -webkit-animation-iteration-count: infinite;
-    animation-iteration-count: infinite;
-    -webkit-animation-duration: 5s;
-    animation-duration: 5s;
-    -webkit-animation-timing-function: linear;
-    animation-timing-function: linear; }
-.solarSystem .mars {
-    width: 440px;
-    height: 440px;
-    border-radius: 50%;
-    border: 1px solid #c5c5c5;
-    position: absolute;
-    -webkit-animation-name: spin;
-    animation-name: spin;
-    -webkit-animation-iteration-count: infinite;
-    animation-iteration-count: infinite;
-    -webkit-animation-duration: 35s;
-    animation-duration: 35s;
-    -webkit-animation-timing-function: linear;
-    animation-timing-function: linear; }
-.solarSystem .mars:before {
-    content: '';
-    height: 20px;
-    width: 20px;
-    background-image: url(../images/mars.png);
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    overflow: hidden;
-    position: absolute;
-    top: 33%;
-    border-radius: 50%;
-    -webkit-animation-name: spin;
-    animation-name: spin;
-    -webkit-animation-iteration-count: infinite;
-    animation-iteration-count: infinite;
-    -webkit-animation-duration: 10s;
-    animation-duration: 10s;
-    -webkit-animation-timing-function: linear;
-    animation-timing-function: linear; }
-.solarSystem .jupiter {
-    width: 540px;
-    height: 540px;
-    border-radius: 50%;
-    border: 1px solid #c5c5c5;
-    position: absolute;
-    -webkit-animation-name: spin;
-    animation-name: spin;
-    -webkit-animation-iteration-count: infinite;
-    animation-iteration-count: infinite;
-    -webkit-animation-duration: 80s;
-    animation-duration: 80s;
-    -webkit-animation-timing-function: linear;
-    animation-timing-function: linear; }
-.solarSystem .jupiter:before {
-    content: '';
-    height: 60px;
-    width: 60px;
-    background-image: url(../images/jupiter.png);
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    overflow: hidden;
-    position: absolute;
-    top: 22%;
-    border-radius: 50%;
-    -webkit-animation-name: spin;
-    animation-name: spin;
-    -webkit-animation-iteration-count: infinite;
-    animation-iteration-count: infinite;
-    -webkit-animation-duration: 30s;
-    animation-duration: 30s;
-    -webkit-animation-timing-function: linear;
-    animation-timing-function: linear; }
-.solarSystem .saturn {
-    width: 640px;
-    height: 640px;
-    border-radius: 50%;
-    border: 1px solid #c5c5c5;
-    position: absolute;
-    -webkit-animation-name: spin;
-    animation-name: spin;
-    -webkit-animation-iteration-count: infinite;
-    animation-iteration-count: infinite;
-    -webkit-animation-duration: 160s;
-    animation-duration: 160s;
-    -webkit-animation-timing-function: linear;
-    animation-timing-function: linear; }
-.solarSystem .saturn:before {
-    content: '';
-    height: 90px;
-    width: 90px;
-    background-image: url(../images/saturn2.png);
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    overflow: hidden;
-    position: absolute;
-    top: 17%;
-    border-radius: 50%;
-    -webkit-animation-name: spin;
-    animation-name: spin;
-    -webkit-animation-iteration-count: infinite;
-    animation-iteration-count: infinite;
-    -webkit-animation-duration: 160s;
-    animation-duration: 160s;
-    -webkit-animation-timing-function: linear;
-    animation-timing-function: linear; }
-.solarSystem .uranus {
-    width: 740px;
-    height: 740px;
-    border-radius: 50%;
-    border: 1px solid #c5c5c5;
-    position: absolute;
-    -webkit-animation-name: spin;
-    animation-name: spin;
-    -webkit-animation-iteration-count: infinite;
-    animation-iteration-count: infinite;
-    -webkit-animation-duration: 200s;
-    animation-duration: 200s;
-    -webkit-animation-timing-function: linear;
-    animation-timing-function: linear; }
-.solarSystem .uranus:before {
-    content: '';
-    height: 35px;
-    width: 35px;
-    background-image: url(../images/uranus.png);
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    overflow: hidden;
-    position: absolute;
-    top: 32%;
-    border-radius: 50%;
-    -webkit-animation-name: spin;
-    animation-name: spin;
-    -webkit-animation-iteration-count: infinite;
-    animation-iteration-count: infinite;
-    -webkit-animation-duration: 30s;
-    animation-duration: 30s;
-    -webkit-animation-timing-function: linear;
-    animation-timing-function: linear; }
-.solarSystem .neptun {
-    width: 840px;
-    height: 840px;
-    border-radius: 50%;
-    border: 1px solid #c5c5c5;
-    position: absolute;
-    -webkit-animation-name: spin;
-    animation-name: spin;
-    -webkit-animation-iteration-count: infinite;
-    animation-iteration-count: infinite;
-    -webkit-animation-duration: 230s;
-    animation-duration: 230s;
-    -webkit-animation-timing-function: linear;
-    animation-timing-function: linear; }
-.solarSystem .neptun:before {
-    content: '';
-    height: 45px;
-    width: 45px;
-    background-image: url(../images/neptun.png);
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    overflow: hidden;
-    position: absolute;
-    top: 33%;
-    border-radius: 50%;
-    -webkit-animation-name: spin;
-    animation-name: spin;
-    -webkit-animation-iteration-count: infinite;
-    animation-iteration-count: infinite;
-    -webkit-animation-duration: 30s;
-    animation-duration: 30s;
-    -webkit-animation-timing-function: linear;
-    animation-timing-function: linear; }
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    list-style: none;
+    -webkit-transform: scale(0.75);
+        -ms-transform: scale(0.75);
+            transform: scale(0.75);
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box; }
+    .container .solarSystem .sun {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      -webkit-box-shadow: #ff4400 0 0 10px;
+              box-shadow: #ff4400 0 0 10px;
+      background-image: url(../images/sun.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      -webkit-animation: glow 1s linear infinite;
+              animation: glow 1s linear infinite;
+      position: absolute; }
+    .container .solarSystem .mercury {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      border: 1px solid #c5c5c5;
+      position: absolute;
+      -webkit-animation-name: spin;
+              animation-name: spin;
+      -webkit-animation-iteration-count: infinite;
+              animation-iteration-count: infinite;
+      -webkit-animation-duration: 10s;
+              animation-duration: 10s;
+      -webkit-animation-timing-function: linear;
+              animation-timing-function: linear; }
+      .container .solarSystem .mercury:before {
+        content: '';
+        height: 8px;
+        width: 8px;
+        background: #D9AB70;
+        position: absolute;
+        top: 32%;
+        border-radius: 50%; }
+    .container .solarSystem .venus {
+      width: 240px;
+      height: 240px;
+      border-radius: 50%;
+      border: 1px solid #c5c5c5;
+      position: absolute;
+      -webkit-animation-name: spin;
+              animation-name: spin;
+      -webkit-animation-iteration-count: infinite;
+              animation-iteration-count: infinite;
+      -webkit-animation-duration: 20s;
+              animation-duration: 20s;
+      -webkit-animation-timing-function: linear;
+              animation-timing-function: linear; }
+      .container .solarSystem .venus:before {
+        content: '';
+        height: 26px;
+        width: 26px;
+        background-image: url(../images/venus.png);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 22%;
+        border-radius: 50%;
+        -webkit-animation-name: spin;
+                animation-name: spin;
+        -webkit-animation-iteration-count: infinite;
+                animation-iteration-count: infinite;
+        -webkit-animation-duration: 10s;
+                animation-duration: 10s;
+        -webkit-animation-timing-function: linear;
+                animation-timing-function: linear; }
+    .container .solarSystem .earth {
+      width: 340px;
+      height: 340px;
+      border-radius: 50%;
+      border: 1px solid #c5c5c5;
+      position: absolute;
+      -webkit-animation-name: spin;
+              animation-name: spin;
+      -webkit-animation-iteration-count: infinite;
+              animation-iteration-count: infinite;
+      -webkit-animation-duration: 25s;
+              animation-duration: 25s;
+      -webkit-animation-timing-function: linear;
+              animation-timing-function: linear; }
+      .container .solarSystem .earth:before {
+        content: '';
+        height: 30px;
+        width: 30px;
+        background-image: url(../images/earth.png);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        overflow: hidden;
+        position: absolute;
+        top: 25%;
+        border-radius: 50%;
+        -webkit-animation-name: spin;
+                animation-name: spin;
+        -webkit-animation-iteration-count: infinite;
+                animation-iteration-count: infinite;
+        -webkit-animation-duration: 5s;
+                animation-duration: 5s;
+        -webkit-animation-timing-function: linear;
+                animation-timing-function: linear; }
+    .container .solarSystem .mars {
+      width: 440px;
+      height: 440px;
+      border-radius: 50%;
+      border: 1px solid #c5c5c5;
+      position: absolute;
+      -webkit-animation-name: spin;
+              animation-name: spin;
+      -webkit-animation-iteration-count: infinite;
+              animation-iteration-count: infinite;
+      -webkit-animation-duration: 35s;
+              animation-duration: 35s;
+      -webkit-animation-timing-function: linear;
+              animation-timing-function: linear; }
+      .container .solarSystem .mars:before {
+        content: '';
+        height: 20px;
+        width: 20px;
+        background-image: url(../images/mars.png);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        overflow: hidden;
+        position: absolute;
+        top: 33%;
+        border-radius: 50%;
+        -webkit-animation-name: spin;
+                animation-name: spin;
+        -webkit-animation-iteration-count: infinite;
+                animation-iteration-count: infinite;
+        -webkit-animation-duration: 10s;
+                animation-duration: 10s;
+        -webkit-animation-timing-function: linear;
+                animation-timing-function: linear; }
+    .container .solarSystem .jupiter {
+      width: 540px;
+      height: 540px;
+      border-radius: 50%;
+      border: 1px solid #c5c5c5;
+      position: absolute;
+      -webkit-animation-name: spin;
+              animation-name: spin;
+      -webkit-animation-iteration-count: infinite;
+              animation-iteration-count: infinite;
+      -webkit-animation-duration: 80s;
+              animation-duration: 80s;
+      -webkit-animation-timing-function: linear;
+              animation-timing-function: linear; }
+      .container .solarSystem .jupiter:before {
+        content: '';
+        height: 60px;
+        width: 60px;
+        background-image: url(../images/jupiter.png);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        overflow: hidden;
+        position: absolute;
+        top: 22%;
+        border-radius: 50%;
+        -webkit-animation-name: spin;
+                animation-name: spin;
+        -webkit-animation-iteration-count: infinite;
+                animation-iteration-count: infinite;
+        -webkit-animation-duration: 30s;
+                animation-duration: 30s;
+        -webkit-animation-timing-function: linear;
+                animation-timing-function: linear; }
+    .container .solarSystem .saturn {
+      width: 640px;
+      height: 640px;
+      border-radius: 50%;
+      border: 1px solid #c5c5c5;
+      position: absolute;
+      -webkit-animation-name: spin;
+              animation-name: spin;
+      -webkit-animation-iteration-count: infinite;
+              animation-iteration-count: infinite;
+      -webkit-animation-duration: 160s;
+              animation-duration: 160s;
+      -webkit-animation-timing-function: linear;
+              animation-timing-function: linear; }
+      .container .solarSystem .saturn:before {
+        content: '';
+        height: 90px;
+        width: 90px;
+        background-image: url(../images/saturn2.png);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        overflow: hidden;
+        position: absolute;
+        top: 17%;
+        border-radius: 50%;
+        -webkit-animation-name: spin;
+                animation-name: spin;
+        -webkit-animation-iteration-count: infinite;
+                animation-iteration-count: infinite;
+        -webkit-animation-duration: 160s;
+                animation-duration: 160s;
+        -webkit-animation-timing-function: linear;
+                animation-timing-function: linear; }
+    .container .solarSystem .uranus {
+      width: 740px;
+      height: 740px;
+      border-radius: 50%;
+      border: 1px solid #c5c5c5;
+      position: absolute;
+      -webkit-animation-name: spin;
+              animation-name: spin;
+      -webkit-animation-iteration-count: infinite;
+              animation-iteration-count: infinite;
+      -webkit-animation-duration: 200s;
+              animation-duration: 200s;
+      -webkit-animation-timing-function: linear;
+              animation-timing-function: linear; }
+      .container .solarSystem .uranus:before {
+        content: '';
+        height: 35px;
+        width: 35px;
+        background-image: url(../images/uranus.png);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        overflow: hidden;
+        position: absolute;
+        top: 32%;
+        border-radius: 50%;
+        -webkit-animation-name: spin;
+                animation-name: spin;
+        -webkit-animation-iteration-count: infinite;
+                animation-iteration-count: infinite;
+        -webkit-animation-duration: 30s;
+                animation-duration: 30s;
+        -webkit-animation-timing-function: linear;
+                animation-timing-function: linear; }
+    .container .solarSystem .neptun {
+      width: 840px;
+      height: 840px;
+      border-radius: 50%;
+      border: 1px solid #c5c5c5;
+      position: absolute;
+      -webkit-animation-name: spin;
+              animation-name: spin;
+      -webkit-animation-iteration-count: infinite;
+              animation-iteration-count: infinite;
+      -webkit-animation-duration: 230s;
+              animation-duration: 230s;
+      -webkit-animation-timing-function: linear;
+              animation-timing-function: linear; }
+      .container .solarSystem .neptun:before {
+        content: '';
+        height: 45px;
+        width: 45px;
+        background-image: url(../images/neptun.png);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        overflow: hidden;
+        position: absolute;
+        top: 33%;
+        border-radius: 50%;
+        -webkit-animation-name: spin;
+                animation-name: spin;
+        -webkit-animation-iteration-count: infinite;
+                animation-iteration-count: infinite;
+        -webkit-animation-duration: 30s;
+                animation-duration: 30s;
+        -webkit-animation-timing-function: linear;
+                animation-timing-function: linear; }
 
 /* Animations */
 @-webkit-keyframes glow {
-    from {
-        -webkit-box-shadow: #ff4400 0 0 10px;
-        box-shadow: #ff4400 0 0 10px; }
-    50% {
-        -webkit-box-shadow: #ff4400 0 0 30px;
-        box-shadow: #ff4400 0 0 30px; }
-    to {
-        -webkit-box-shadow: #ff4400 0 0 10px;
-        box-shadow: #ff4400 0 0 10px; } }
+  from {
+    -webkit-box-shadow: #ff4400 0 0 10px;
+            box-shadow: #ff4400 0 0 10px; }
+  50% {
+    -webkit-box-shadow: #ff4400 0 0 30px;
+            box-shadow: #ff4400 0 0 30px; }
+  to {
+    -webkit-box-shadow: #ff4400 0 0 10px;
+            box-shadow: #ff4400 0 0 10px; } }
 @keyframes glow {
-    from {
-        -webkit-box-shadow: #ff4400 0 0 10px;
-        box-shadow: #ff4400 0 0 10px; }
-    50% {
-        -webkit-box-shadow: #ff4400 0 0 30px;
-        box-shadow: #ff4400 0 0 30px; }
-    to {
-        -webkit-box-shadow: #ff4400 0 0 10px;
-        box-shadow: #ff4400 0 0 10px; } }
+  from {
+    -webkit-box-shadow: #ff4400 0 0 10px;
+            box-shadow: #ff4400 0 0 10px; }
+  50% {
+    -webkit-box-shadow: #ff4400 0 0 30px;
+            box-shadow: #ff4400 0 0 30px; }
+  to {
+    -webkit-box-shadow: #ff4400 0 0 10px;
+            box-shadow: #ff4400 0 0 10px; } }
 
 @-webkit-keyframes spin {
-    from {
-        -webkit-transform: rotate(0deg);
-        transform: rotate(0deg); }
-    to {
-        -webkit-transform: rotate(360deg);
-        transform: rotate(360deg); } }
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
 
 @keyframes spin {
-    from {
-        -webkit-transform: rotate(0deg);
-        transform: rotate(0deg); }
-    to {
-        -webkit-transform: rotate(360deg);
-        transform: rotate(360deg); } }
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+/* Media */
+@media (max-width: 650px) {
+  .container .solarSystem {
+    -webkit-transform: scale(0.55);
+        -ms-transform: scale(0.55);
+            transform: scale(0.55); } }
+
+@media (max-width: 470px) {
+  .container .solarSystem {
+    -webkit-transform: scale(0.4);
+        -ms-transform: scale(0.4);
+            transform: scale(0.4); } }
