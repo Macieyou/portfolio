@@ -67,11 +67,11 @@ body {
               animation-timing-function: linear; }
       .container .solarSystem .mercury:before {
         content: '';
-        height: 8px;
-        width: 8px;
+        height: 10px;
+        width: 10px;
         background: #D9AB70;
         position: absolute;
-        top: 32%;
+        top: 30%;
         border-radius: 50%; }
     .container .solarSystem .venus {
       width: 240px;
@@ -120,6 +120,24 @@ body {
               animation-duration: 25s;
       -webkit-animation-timing-function: linear;
               animation-timing-function: linear; }
+      .container .solarSystem .earth ul li.moon {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        position: absolute;
+        -webkit-animation: spin 5s linear infinite;
+                animation: spin 5s linear infinite;
+        list-style: none;
+        top: 18%;
+        left: -7%; }
+        .container .solarSystem .earth ul li.moon:before {
+          content: '';
+          height: 8px;
+          width: 8px;
+          background: #c5c5c5;
+          position: absolute;
+          top: 32%;
+          border-radius: 50%; }
       .container .solarSystem .earth:before {
         content: '';
         height: 30px;
